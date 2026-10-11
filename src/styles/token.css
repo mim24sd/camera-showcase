@@ -1,0 +1,179 @@
+@theme {
+    /* Primary — Espresso */
+    --color-primary-50: #f5f1ed;
+    --color-primary-100: #e8ded5;
+    --color-primary-200: #d2bdae;
+    --color-primary-300: #b89a87;
+    --color-primary-400: #987764;
+    --color-primary-500: #76563f;
+    --color-primary-600: #604431;
+    --color-primary-700: #493326;
+    --color-primary-800: #30251f;
+    --color-primary-900: #201915;
+    --color-primary-950: #15100d;
+
+    /* Secondary — Copper */
+    --color-secondary-50: #faf2eb;
+    --color-secondary-100: #f2dfce;
+    --color-secondary-200: #e7c3a6;
+    --color-secondary-300: #d9a47d;
+    --color-secondary-400: #c88b60;
+    --color-secondary-500: #b77a50;
+    --color-secondary-600: #98603d;
+    --color-secondary-700: #784a31;
+    --color-secondary-800: #593725;
+    --color-secondary-900: #392419;
+
+    /* Gray — Neutral */
+    --color-gray-50: #fcfbf9;
+    --color-gray-100: #f7f5f2;
+    --color-gray-200: #f0ede9;
+    --color-gray-300: #e7e2dc;
+    --color-gray-400: #d8d1c9;
+    --color-gray-500: #a99d92;
+    --color-gray-600: #8d8176;
+    --color-gray-700: #766a60;
+    --color-gray-800: #4d443d;
+    --color-gray-900: #2d2722;
+    --color-gray-950: #15110e;
+
+    /* Ivory — Warm backgrounds */
+    --color-ivory-50: #fffdf9;
+    --color-ivory-100: #f7f3ed;
+    --color-ivory-200: #eee7dd;
+    --color-ivory-300: #e1d6c8;
+    --color-ivory-400: #cfc0af;
+
+    /* Error */
+    --color-error-50: #fff3f1;
+    --color-error-100: #fde5e1;
+    --color-error-200: #f8cdc6;
+    --color-error-300: #f0aaa0;
+    --color-error-400: #e98578;
+    --color-error-500: #dc6356;
+    --color-error-600: #ca483c;
+    --color-error-700: #b83a30;
+    --color-error-800: #9e3028;
+    --color-error-900: #812720;
+
+    /* Success */
+    --color-success-50: #f3f8f3;
+    --color-success-100: #e3efe4;
+    --color-success-200: #cbe1ce;
+    --color-success-300: #acd0b3;
+    --color-success-400: #88ba94;
+    --color-success-500: #68a47a;
+    --color-success-600: #508c63;
+    --color-success-700: #3f7652;
+    --color-success-800: #356346;
+    --color-success-900: #234331;
+
+    /* Warning */
+    --color-warning-50: #fffbeb;
+    --color-warning-100: #fff5cc;
+    --color-warning-200: #fce9a1;
+    --color-warning-300: #f6d873;
+    --color-warning-400: #ebc64b;
+    --color-warning-500: #d9ad2d;
+    --color-warning-600: #c2951e;
+    --color-warning-700: #a97d18;
+    --color-warning-800: #8b6516;
+    --color-warning-900: #705115;
+
+    /* Semantic colors */
+    --color-background: #f7f3ed;
+    --color-surface: #fffdf9;
+    --color-surface-muted: #eee7dd;
+    --color-foreground: #30251f;
+    --color-foreground-muted: #81746a;
+    --color-border: #e1d6c8;
+
+    --color-primary: #30251f;
+    --color-primary-foreground: #fffdf9;
+    --color-secondary: #b77a50;
+    --color-secondary-foreground: #201915;
+    --color-accent: #b77a50;
+    --color-accent-foreground: #201915;
+    --color-danger: #b83a30;
+    --color-success: #3f7652;
+    --color-warning: #a97d18;
+
+    /* Typography — Inter */
+    --font-sans: "Inter", sans-serif;
+
+    --text-display: clamp(2.5rem, 6vw, 4.5rem);
+    --text-display--line-height: 1.05;
+    --text-display--letter-spacing: -0.055em;
+
+    --text-h1: clamp(2.25rem, 4.5vw, 3.5rem);
+    --text-h1--line-height: 1.1;
+    --text-h1--letter-spacing: -0.04em;
+
+    --text-h2: clamp(1.875rem, 3.5vw, 2.5rem);
+    --text-h2--line-height: 1.15;
+    --text-h2--letter-spacing: -0.035em;
+
+    --text-h3: clamp(1.5rem, 2.5vw, 1.75rem);
+    --text-h3--line-height: 1.25;
+    --text-h3--letter-spacing: -0.025em;
+
+    --text-h4: 1.25rem;
+    --text-h4--line-height: 1.4;
+
+    --text-body-lg: 1.125rem;
+    --text-body-lg--line-height: 1.75;
+
+    --text-body: 1rem;
+    --text-body--line-height: 1.7;
+
+    --text-body-sm: 0.875rem;
+    --text-body-sm--line-height: 1.6;
+
+    --text-caption: 0.8125rem;
+    --text-caption--line-height: 1.5;
+
+    --text-overline: 0.75rem;
+    --text-overline--line-height: 1.4;
+    --text-overline--letter-spacing: 0.12em;
+
+    /* Spacing scale */
+    --spacing-0: 0;
+    --spacing-1: 0.25rem;
+    --spacing-2: 0.5rem;
+    --spacing-3: 0.75rem;
+    --spacing-4: 1rem;
+    --spacing-5: 1.25rem;
+    --spacing-6: 1.5rem;
+    --spacing-8: 2rem;
+    --spacing-10: 2.5rem;
+    --spacing-12: 3rem;
+    --spacing-16: 4rem;
+    --spacing-18: 4.5rem;
+    --spacing-22: 5.5rem;
+    --spacing-24: 6rem;
+    --spacing-30: 7.5rem;
+    --spacing-section: 7rem;
+    --spacing-gutter: 1.5rem;
+
+    /* Radius */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.625rem;
+    --radius-lg: 0.875rem;
+    --radius-xl: 1.25rem;
+    --radius-2xl: 1.75rem;
+    --radius-card: 1.25rem;
+    --radius-panel: 1.75rem;
+    --radius-pill: 9999px;
+
+    /* Standard shadows */
+    --shadow-sm: 0 1px 2px rgb(48 37 31 / 5%);
+    --shadow-md: 0 4px 12px rgb(48 37 31 / 7%);
+    --shadow-lg: 0 8px 30px rgb(48 37 31 / 8%);
+    --shadow-xl: 0 16px 48px rgb(48 37 31 / 10%);
+    --shadow-2xl: 0 24px 64px rgb(32 25 21 / 14%);
+
+    /* Semantic shadows */
+    --shadow-card: 0 16px 48px rgb(48 37 31 / 8%);
+    --shadow-floating: 0 24px 64px rgb(32 25 21 / 14%);
+    --shadow-inset-soft: inset 0 1px 2px rgb(48 37 31 / 5%);
+}
