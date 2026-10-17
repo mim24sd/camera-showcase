@@ -61,7 +61,7 @@ export default function ScrollImageSequence({
             context.imageSmoothingEnabled = true;
             context.imageSmoothingQuality = "high";
 
-            const scale = Math.min(
+            const scale = Math.max(
                 width / image.naturalWidth,
                 height / image.naturalHeight,
             );
@@ -197,7 +197,7 @@ export default function ScrollImageSequence({
                     width: "100%",
                     height: "100vh",
                     overflow: "hidden",
-                    background: "#1b100b",
+                    background: "transparent",
                 }}
             >
                 <canvas

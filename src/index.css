@@ -1,3 +1,4 @@
+
 @import "@fontsource-variable/inter";
 @import "@fontsource/cormorant-garamond/400.css";
 @import "@fontsource/cormorant-garamond/500.css";
@@ -20,21 +21,25 @@
 }
 
 .app-layout {
+    display: flex;
+    flex-direction: column;
     position: relative;
     isolation: isolate;
     min-height: 100vh;
+}
 
-    .content {
-        position: relative;
-        isolation: isolate;
+.app-layout .content {
+    position: relative;
+    isolation: isolate;
+    flex: 1;
+    width: 100%;
+}
 
-        &::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            z-index: 1;
-            background: rgb(20 11 7 / 60%);
-            pointer-events: none;
-        }
-    }
+.app-layout .content::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgb(20 11 7 / 60%);
+    pointer-events: none;
 }

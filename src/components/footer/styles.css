@@ -1,0 +1,190 @@
+@reference "../../index.css";
+
+.site-footer {
+  @apply w-full border-t border-primary-800 bg-primary-950 text-ivory-100;
+
+  .inner {
+    @apply mx-auto w-[calc(100%-3rem)] max-w-7xl;
+  }
+
+  .top {
+    @apply grid min-h-[136px] grid-cols-3 items-center gap-6 py-7;
+  }
+
+  .brand {
+    @apply flex flex-col items-start gap-3.5;
+  }
+
+  .logo {
+    @apply whitespace-nowrap font-display text-2xl font-normal leading-none text-ivory-100 transition-colors duration-200;
+    letter-spacing: 0.42em;
+    text-decoration: none;
+
+    &:hover {
+      @apply text-secondary-200;
+    }
+
+    &:focus-visible {
+      @apply outline-1 outline-offset-[5px] outline-secondary-300;
+    }
+  }
+
+  .tagline {
+    @apply m-0 font-sans text-[10px] font-normal leading-normal text-gray-500;
+    letter-spacing: 0.48em;
+  }
+
+  .nav,
+  .legal,
+  .socials {
+    @apply flex items-center;
+  }
+
+  .nav {
+    @apply justify-center gap-[38px];
+
+    a {
+      @apply font-sans text-[11px] font-normal leading-normal text-gray-500 transition-colors duration-200;
+      letter-spacing: 0.2em;
+      text-decoration: none;
+
+      &:hover,
+      &:focus-visible {
+        @apply text-secondary-300;
+      }
+
+      &:focus-visible {
+        @apply outline-1 outline-offset-4 outline-secondary-300;
+      }
+    }
+  }
+
+  .socials {
+    @apply justify-end gap-6;
+
+    a {
+      @apply inline-flex size-5 items-center justify-center text-ivory-100 transition-all duration-200;
+
+      &:hover {
+        @apply -translate-y-0.5 text-secondary-300;
+      }
+
+      &:focus-visible {
+        @apply outline-1 outline-offset-[5px] outline-secondary-300;
+      }
+    }
+
+    svg {
+      @apply block size-[19px];
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  }
+
+  .icon-fill {
+    fill: currentColor;
+    stroke: none;
+  }
+
+  .icon-cutout {
+    fill: var(--color-primary-950);
+    stroke: none;
+  }
+
+  .bottom {
+    @apply flex min-h-[58px] items-center justify-between gap-5 border-t border-primary-800 py-4;
+  }
+
+  .copyright {
+    @apply m-0 font-sans text-[11px] font-normal leading-relaxed text-gray-500;
+    letter-spacing: 0.08em;
+  }
+
+  .legal {
+    @apply justify-end gap-6;
+
+    a {
+      @apply font-sans text-[11px] font-normal leading-normal text-gray-500 transition-colors duration-200;
+      letter-spacing: 0.2em;
+      text-decoration: none;
+
+      &:hover,
+      &:focus-visible {
+        @apply text-secondary-300;
+      }
+
+      &:focus-visible {
+        @apply outline-1 outline-offset-4 outline-secondary-300;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .site-footer {
+    .inner {
+      @apply w-[calc(100%-2rem)];
+    }
+
+    .top {
+      @apply min-h-0 grid-cols-[1fr_auto] gap-y-7 py-7;
+    }
+
+    .brand {
+      @apply gap-2.5;
+    }
+
+    .logo {
+      @apply text-2xl;
+      letter-spacing: 0.34em;
+    }
+
+    .tagline {
+      @apply text-[9px];
+      letter-spacing: 0.32em;
+    }
+
+    .nav {
+      @apply col-span-full col-start-1 row-start-2 justify-start gap-7;
+    }
+
+    .socials {
+      @apply gap-4;
+    }
+
+    .bottom {
+      @apply items-start flex-col gap-3.5;
+    }
+
+    .legal {
+      @apply flex-wrap justify-start gap-[18px];
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .site-footer {
+    .inner {
+      @apply w-[calc(100%-1.5rem)];
+    }
+
+    .socials {
+      @apply gap-2.5;
+
+      a {
+        @apply size-[18px];
+      }
+
+      svg {
+        @apply size-[17px];
+      }
+    }
+
+    .nav {
+      @apply gap-5;
+    }
+  }
+}

@@ -1,17 +1,19 @@
-import ScrollImageSequence from './components/ScrollImageSequence'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout'
+import Home from "./pages/home/Home"
+import About from "./pages/about/About";
+import Buy from "./pages/buy/Buy"
 
 export default function App() {
     return (
-        <MainLayout>
-            <ScrollImageSequence
-                frameCount={150}
-                frameFolder="/frames-sequence"
-                filePrefix="frame-"
-                extension="jpg"
-                startFrame={1}
-                scrollHeight={400}
-            />
-        </MainLayout>
+        <BrowserRouter>
+            <Routes>
+                <Route element={<MainLayout />}>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/buy" element={<Buy />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
     )
 }
