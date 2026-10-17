@@ -1,8 +1,9 @@
-import ScrollImageSequence from "./components/ScrollImageSequence";
+import ScrollImageSequence from './components/ScrollImageSequence'
+import MainLayout from './layouts/MainLayout'
 
 export default function App() {
     return (
-        <main className="app-layout">
+        <MainLayout>
             <ScrollImageSequence
                 frameCount={150}
                 frameFolder="/frames-sequence"
@@ -11,7 +12,6 @@ export default function App() {
                 startFrame={1}
                 scrollHeight={400}
             />
-            <div className="background-blur" aria-hidden="true" />
-        </main>
-    );
+        </MainLayout>
+    )
 }
