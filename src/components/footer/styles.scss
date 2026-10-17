@@ -1,0 +1,236 @@
+.site-footer {
+  --footer-background: var(--color-primary-950, #15100d);
+  --footer-foreground: var(--color-ivory-100, #f7f3ed);
+  --footer-muted: var(--color-gray-500, #a99d92);
+  --footer-divider: rgb(207 192 175 / 22%);
+  --footer-accent: var(--color-secondary-300, #d9a47d);
+
+  @apply w-full;
+
+  color: var(--footer-foreground);
+  background-color: var(--footer-background);
+  border-top: 1px solid var(--footer-divider);
+
+  // Layout
+  .inner {
+    width: calc(100% - 48px);
+    max-width: 1236px;
+    margin-inline: auto;
+  }
+
+  .top {
+    @apply grid items-center gap-6;
+
+    min-height: 136px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-block: 28px;
+  }
+
+  .bottom {
+    @apply flex items-center justify-between gap-5;
+
+    min-height: 58px;
+    border-top: 1px solid var(--footer-divider);
+    padding-block: 16px;
+  }
+
+  // Brand
+  .brand {
+    @apply flex flex-col items-start;
+
+    gap: 14px;
+  }
+
+  .logo {
+    color: var(--footer-foreground);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 0.42em;
+    line-height: 1;
+    text-decoration: none;
+
+    &:focus-visible {
+      outline: 1px solid var(--footer-accent);
+      outline-offset: 5px;
+    }
+  }
+
+  .tagline {
+    margin: 0;
+    color: var(--footer-muted);
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.48em;
+    line-height: 1.5;
+  }
+
+  // Navigation
+  .nav,
+  .legal,
+  .socials {
+    @apply flex items-center;
+  }
+
+  .nav {
+    @apply justify-center;
+
+    gap: 38px;
+  }
+
+  .legal {
+    @apply justify-end;
+
+    gap: 24px;
+  }
+
+  .nav,
+  .legal {
+    a {
+      color: var(--footer-muted);
+      font-family: "Inter", sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      line-height: 1.5;
+      text-decoration: none;
+      transition: color 180ms ease;
+
+      &:hover,
+      &:focus-visible {
+        color: var(--footer-accent);
+      }
+    }
+  }
+
+  // Social links
+  .socials {
+    @apply justify-end;
+
+    gap: 24px;
+
+    a {
+      @apply inline-flex items-center justify-center;
+
+      width: 20px;
+      height: 20px;
+      color: var(--footer-foreground);
+      transition: color 180ms ease, opacity 180ms ease, transform 180ms ease;
+
+      &:hover,
+      &:focus-visible {
+        color: var(--footer-accent);
+        transform: translateY(-2px);
+      }
+
+      &:focus-visible {
+        outline: 1px solid var(--footer-accent);
+        outline-offset: 5px;
+      }
+    }
+
+    svg {
+      display: block;
+      width: 19px;
+      height: 19px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+
+      .icon-fill {
+        fill: currentColor;
+        stroke: none;
+      }
+
+      .icon-cutout {
+        fill: var(--footer-background);
+        stroke: none;
+      }
+    }
+  }
+
+  // Copyright
+  .copyright {
+    margin: 0;
+    color: var(--footer-muted);
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    line-height: 1.6;
+  }
+
+  // Responsive
+  @media (max-width: 700px) {
+    .inner {
+      width: calc(100% - 32px);
+    }
+
+    .top {
+      min-height: auto;
+      grid-template-columns: 1fr auto;
+      row-gap: 28px;
+      padding-block: 28px;
+    }
+
+    .brand {
+      gap: 10px;
+    }
+
+    .logo {
+      font-size: 24px;
+      letter-spacing: 0.34em;
+    }
+
+    .tagline {
+      font-size: 9px;
+      letter-spacing: 0.32em;
+    }
+
+    .nav {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      justify-content: flex-start;
+      gap: 28px;
+    }
+
+    .socials {
+      gap: 16px;
+    }
+
+    .bottom {
+      @apply items-start flex-col;
+
+      gap: 14px;
+    }
+
+    .legal {
+      @apply flex-wrap justify-start;
+
+      gap: 18px;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .socials {
+      gap: 10px;
+
+      a {
+        width: 18px;
+        height: 18px;
+      }
+
+      svg {
+        width: 17px;
+        height: 17px;
+      }
+    }
+
+    .nav {
+      gap: 20px;
+    }
+  }
+}
