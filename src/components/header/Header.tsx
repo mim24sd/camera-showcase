@@ -1,17 +1,19 @@
-import './styles.scss'
+
+import { Link } from 'react-router-dom'
+import './styles.css'
 
 const Header = () => {
     return (
         <header className="site-header">
             <div className="inner">
-                <a href="#home" className="logo">
+                <Link to="/" className="logo">
                     LUMEN
-                </a>
+                </Link>
 
                 <nav className="nav" aria-label="Main navigation">
-                    <a href="#home">HOME</a>
-                    <a href="#about">ABOUT</a>
-                    <a href="#buy">BUY</a>
+                    <Link to="/">HOME</Link>
+                    <Link to="/about">ABOUT</Link>
+                    <Link to="/buy">BUY</Link>
                 </nav>
             </div>
         </header>

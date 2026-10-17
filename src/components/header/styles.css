@@ -1,0 +1,21 @@
+@reference "../../index.css";
+
+.site-header {
+  @apply absolute inset-x-0 top-0 z-10 w-full bg-transparent text-ivory-100;
+}
+
+.site-header .inner {
+  @apply mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-5;
+}
+
+.site-header .logo {
+  @apply font-display text-xl font-medium uppercase tracking-[0.4em] text-ivory-100 transition-opacity duration-300 hover:opacity-75;
+}
+
+.site-header .nav {
+  @apply flex items-center gap-10;
+}
+
+.site-header .nav a {
+  @apply font-sans text-[11px] font-medium uppercase tracking-[0.2em] text-ivory-100/60 transition-colors duration-300 hover:text-ivory-100;
+}
